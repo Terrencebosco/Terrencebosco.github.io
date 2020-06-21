@@ -12,6 +12,7 @@ This is will be the first of three post in the exploration of New York City’s 
 
 ## When are violations being written?
 
+
 ### Violations at a glance
 
 To gain an understanding of how the violations are categorized and how many of each type there is we can look at figure 1
@@ -28,11 +29,27 @@ We can gain even more of an understanding of the data set when we set those top 
 
 ![figure2](https://i.imgur.com/MgL0uOR.png)
 
-* Figure 2 shows the breakdown of the top five ticket types and their respected borough. We can see that no parking is the leading ticket type for each borough except Richmond. Also, speeding is the second leading ticket type for each borough except for Manhattan where speeding is the least. Another interesting note is how few tickets there are for Richmond in our sample.
+* Figure 2 shows the breakdown of the top five ticket types and their respected borough. We can see that no parking is the leading ticket type for each borough except Richmond. Also, speeding is the second leading ticket type for each borough except for Manhattan where speeding is the least. Another interesting note is how few tickets were recorded for Richmond in our sample.
+
 
 
 ### Time Breakdown
 
--	Our time variable will be broken down into three part, hour of the day, day of the week, and month of the year.
+Our time variable will be broken down into three part, hour of the day, day of the week, and month of the year.
+
+*figure 3*
 
 <iframe width="700" height="700" frameborder="0" scrolling="no" src="//plotly.com/~Terrence.bosco/19.embed"></iframe>
+
+we can gain a better understanding of the disterbution of tickets verse the 3 time intervals when we look at them individually. 
+
+#### Hour of the Day
+
+We can see in figure 4 below that the majority of the tickets given are between the hours of 8am and 3pm. This is something that doesn’t evidently surprise me. We might assume that more people are out driving and parking at this time than between 3pm and 8am. We might also account for this with the idea that more officers that write parking tickets are working during this time than later at night. 
+
+*figure 4*
+![Imgur](https://i.imgur.com/eDOBvXg.png)
+
+
+
+
