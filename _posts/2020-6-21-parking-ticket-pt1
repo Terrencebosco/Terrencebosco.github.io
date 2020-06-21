@@ -1,0 +1,16 @@
+---
+layout: post
+title: When are parking tickets being written?
+subtitle: An exploration into new york cities 2017 parking violation data set.
+cover-img: https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSvTwcNZGvPOPu5K4mTKtFjVd6Ge4yA2hDF-O651AVC0RKG0cPj&usqp=CAU
+tags: [blog,build week]
+---
+# Purpose of this post:
+
+This is will be the first of three post in the exploration of New York City’s 2017 parking and traffic violations data set. This data set contains over 3 million instance of a parking or traffic violation for the year of 2017 in the city of New York. This includes the time and date of the violation, the vehicles characteristic, the location of the violation occurred, and finally the reason for ticket to be written. Do to the sheer size and depth of this data set I will break the exploitation into 3 parts, when are violations being written, what vehicles are receiving violations and where are the violations happening.  Before we begin I’d like to preface that because the size of this data set is so large I took a random sample of 10,000 violations to conduct my exploratory data analysis. 
+
+
+
+
+
+<iframe width="700" height="700" frameborder="0" scrolling="no" src="//plotly.com/~Terrence.bosco/19.embed"></iframe>
