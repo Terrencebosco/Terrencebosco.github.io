@@ -48,8 +48,23 @@ we can gain a better understanding of the disterbution of tickets verse the 3 ti
 We can see in figure 4 below that the majority of the tickets given are between the hours of 8am and 3pm. This is something that doesn’t evidently surprise me. We might assume that more people are out driving and parking at this time than between 3pm and 8am. We might also account for this with the idea that more officers that write parking tickets are working during this time than later at night. 
 
 *figure 4*
+
 ![Imgur](https://i.imgur.com/eDOBvXg.png)
 
+#### Day of the Week
 
+with figure 5 below we can see that most of the tickets written were during the work week of Monday through Friday with less on Saturday and even less on Sunday. We might assume that more people are driving during the week go to work than the weekends. So there are more opportunities for tickets to be written.
+
+*figre 5*
+
+![Imgur](https://i.imgur.com/4Q9gSia.png)
+
+#### Month of the Year
+
+in figure 6 below we can see that the months of July and December are the two months with the least amount of tickets and September and may having the most tickets given.
+
+*Figure 6*
+
+![Imgur](https://i.imgur.com/wHvCTha.png)
 
 
