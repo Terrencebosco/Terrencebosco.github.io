@@ -15,11 +15,15 @@ This is will be the first of three post in the exploration of New York City’s 
 
 *Figure 1*
 
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~Terrence.bosco/1.embed"></iframe>
+<iframe width="700" height="700" frameborder="0" scrolling="no" src="//plotly.com/~Terrence.bosco/1.embed"></iframe>
 
 * As we see in figure 1 there are 64 different types of violations in our sample. Of those 64 violation 5 of them make up more than 50% of all the tickets given and “No Parking” tickets being the most making up 20% of the 10,000 sampled violations.
-* We can gain even more of an understanding of the data set when we set those top 5 violations to the borough they were filed in.
 
+We can gain even more of an understanding of the data set when we set those top 5 violations to the borough they were filed in.
 
+*figure 2*
+[Imgur](https://i.imgur.com/MgL0uOR.png)
+
+* Figure 2 shows the breakdown of the top five ticket types and their respected borough. We can see that no parking is the leading ticket type for each borough except Richmond. Also, speeding is the second leading ticket type for each borough except for Manhattan where speeding is the least. Another interesting note is how few tickets there are for Richmond in our sample.
 
 <iframe width="700" height="700" frameborder="0" scrolling="no" src="//plotly.com/~Terrence.bosco/19.embed"></iframe>
