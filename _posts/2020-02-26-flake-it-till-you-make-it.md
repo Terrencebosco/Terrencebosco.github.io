@@ -12,5 +12,4 @@ tags: [books, test]
     <script data-plotly="Terrence.bosco:19" sharekey-plotly="HFvJQNk68TH37MjaCRatPL" src="https://plotly.com/embed.js" async></script>
 </div>
 
-test
-![graph](<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~Terrence.bosco/19.embed"></iframe>)
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~Terrence.bosco/19.embed"></iframe>
