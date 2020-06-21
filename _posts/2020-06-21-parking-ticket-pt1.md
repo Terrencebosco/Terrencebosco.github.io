@@ -30,8 +30,8 @@ We can gain even more of an understanding of the data set when we set those top 
 ![figure2](https://i.imgur.com/MgL0uOR.png)
 *figure 2*
 
-* Figure 2 shows the breakdown of the top five ticket types and their respected borough. We can see that no parking is the leading ticket type for each borough except Richmond. Also, speeding is the second leading ticket type for each borough except for Manhattan where speeding is the least. Another interesting note is how few tickets were recorded for Richmond in our sample.
-
+* Figure 2 shows the breakdown of the top five ticket types and their respected borough. We can see that no parking is the leading ticket type for each borough except Richmond. Also, speeding is the second leading ticket type for each borough except for Manhattan where speeding is the least. Another interesting note is how few tickets were recorded for Richmond in our sample.  
+  
 
 
 ### Time Breakdown
@@ -92,7 +92,7 @@ in figure 6 below we can see that the months of July and December are the two mo
 * Our exploratory data analysis showed us that the majority of tickets given are between the hours of 8am and 3pm Monday through Friday with the most given in September. We also explored the breakdown of the ticket types and learned that the top 5 ticket types make up more that 50% of the 10,000 tickets sampled. 
 * Stay tuned to parts 2, and 3 where we explore the types for cars that are being ticket and where they are being ticketed 
 
-## resources
+## Resources
 * [New York parking violation data set](https://www.kaggle.com/new-york-city/nyc-parking-tickets?select=Parking_Violations_Issued_-_Fiscal_Year_2017.csv)
 * [New York Cities Violation code breakdown](https://www1.nyc.gov/site/finance/vehicles/services-violation-codes.page)]
 * [google colab note book](https://colab.research.google.com/drive/12WcZmftU4udrCZ4Xrzp38J1sO-qqKeXn?usp=sharing)
