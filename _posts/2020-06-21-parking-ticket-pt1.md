@@ -23,7 +23,7 @@ To gain an understanding of how the violations are categorized and how many of e
 <iframe width="700" height="700" frameborder="0" scrolling="no" src="//plotly.com/~Terrence.bosco/1.embed"></iframe>
 *Figure 1*
 
-* As we see in figure 1 there are 64 different types of violations in our sample. Of those 64 violation 5 of them make up more than 50% of all the tickets given and “No Parking” tickets being the most making up 20% of the 10,000 sampled violations.
+* As we see in figure 1 there are 64 different types of violations in our sample. Of those 64 violation 5 of them make up more than 50% of all the tickets given and *No Parking* tickets being the most making up 20% of the 10,000 sampled violations.
 
 We can gain even more of an understanding of the data set when we set those top 5 violations to the borough they were filed in.
 
@@ -86,3 +86,13 @@ in figure 6 below we can see that the months of July and December are the two mo
 <iframe width="800" height="700" frameborder="0" scrolling="no" src="//plotly.com/~Terrence.bosco/17.embed"></iframe>
 *figure 8*
 * This heat map shows the distribution of tickets for each month and the day of the week for that month. This shows a consistence with our graphs above that the majority of tickets were given between Monday and Friday. Also, the most tickets given in the year was September Thursdays. This can explain why September has the most of any month. 
+
+## Conclusion 
+
+* Our exploratory data analysis showed us that the majority of tickets given are between the hours of 8am and 3pm Monday through Friday with the most given in September. We also explored the breakdown of the ticket types and learned that the top 5 ticket types make up more that 50% of the 10,000 tickets sampled. 
+* Stay tuned to parts 2, and 3 where we explore the types for cars that are being ticket and where they are being ticketed 
+
+## resources
+* [New York parking violation data set](https://www.kaggle.com/new-york-city/nyc-parking-tickets?select=Parking_Violations_Issued_-_Fiscal_Year_2017.csv)
+* [New York Cities Violation code breakdown](https://www1.nyc.gov/site/finance/vehicles/services-violation-codes.page)]
+* [google colab note book](https://colab.research.google.com/drive/12WcZmftU4udrCZ4Xrzp38J1sO-qqKeXn?usp=sharing)
