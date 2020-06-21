@@ -11,7 +11,10 @@ This is will be the first of three post in the exploration of New York City’s 
 
 
 ## When are violations being written?
--To gain an understanding of how the violations are categorized and how many of each type there is we can look at figure 1
+
+### Violations at a glance
+
+To gain an understanding of how the violations are categorized and how many of each type there is we can look at figure 1
 
 *Figure 1*
 
@@ -22,8 +25,14 @@ This is will be the first of three post in the exploration of New York City’s 
 We can gain even more of an understanding of the data set when we set those top 5 violations to the borough they were filed in.
 
 *figure 2*
+
 ![figure2](https://i.imgur.com/MgL0uOR.png)
 
 * Figure 2 shows the breakdown of the top five ticket types and their respected borough. We can see that no parking is the leading ticket type for each borough except Richmond. Also, speeding is the second leading ticket type for each borough except for Manhattan where speeding is the least. Another interesting note is how few tickets there are for Richmond in our sample.
+
+
+### Time Breakdown
+
+-	Our time variable will be broken down into three part, hour of the day, day of the week, and month of the year.
 
 <iframe width="700" height="700" frameborder="0" scrolling="no" src="//plotly.com/~Terrence.bosco/19.embed"></iframe>
