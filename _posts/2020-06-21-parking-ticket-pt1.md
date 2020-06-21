@@ -68,3 +68,18 @@ in figure 6 below we can see that the months of July and December are the two mo
 ![Imgur](https://i.imgur.com/wHvCTha.png)
 
 
+### Hour of the day VS. Day of the week
+
+*figure 7*
+
+<iframe width="700" height="700" frameborder="0" scrolling="no" src="//plotly.com/~Terrence.bosco/15.embed"></iframe>
+
+* Here we can look at the distribution of tickets given in hours vs Day of the week. We can see that the hour of the day and day of the week are consistent with our graphs above. A majority of tickets given are during the hours of 8am and 3pm during the day of Monday – Friday. With the most tickets given on Thursdays between the hours of 9am and 10am
+
+### Day of the week VS. Month
+
+*figure 8*
+
+<iframe width="700" height="700" frameborder="0" scrolling="no" src="//plotly.com/~Terrence.bosco/17.embed"></iframe>
+
+* This heat map shows the distribution of tickets for each month and the day of the week for that month. This shows a consistence with our graphs above that the majority of tickets were given between Monday and Friday. Also, the most tickets given in the year was September Thursdays. This can explain why September has the most of any month. 
