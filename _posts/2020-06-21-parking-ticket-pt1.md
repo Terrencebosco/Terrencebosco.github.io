@@ -58,7 +58,7 @@ We can see in figure 4 below that the majority of the tickets given are between 
 
 with figure 5 below we can see that most of the tickets written were during the work week of Monday through Friday with less on Saturday and even less on Sunday. We might assume that more people are driving during the week go to work than the weekends. So there are more opportunities for tickets to be written.
 
-*figre 5*
+*figure 5*
 
 ![Imgur](https://i.imgur.com/4Q9gSia.png)
 
