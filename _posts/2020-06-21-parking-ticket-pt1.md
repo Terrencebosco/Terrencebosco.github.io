@@ -24,14 +24,15 @@ To gain an understanding of how the violations are categorized and how many of e
 <iframe width="700" height="700" frameborder="0" scrolling="no" src="//plotly.com/~Terrence.bosco/1.embed"></iframe>
 *Figure 1*
 
-* As we see in figure 1 there are 64 different types of violations in our sample. Of those 64 violations 5 of them make up more than 50% of all the tickets given. *"No Parking"* tickets being the most making up 20% of the 10,000 sampled violations.
+As we see in figure 1 there are 64 different types of violations in our sample. Of those 64 violations 5 of them make up more than 50% of all the tickets given. *"No Parking"* tickets being the most making up 20% of the 10,000 sampled violations.
 
 We can gain even more of an understanding of the data set when we set those top 5 violations to the borough they were filed in.
 
 ![figure2](https://i.imgur.com/MgL0uOR.png)
+
 *figure 2*
 
-* Figure 2 shows the breakdown of the top 5 ticket types and their respected borough. We can see that "no parking" is the leading ticket type for each borough except for Richmond. Also, speeding is the second leading ticket type for each borough except for Manhattan where speeding is the least. Another interesting note is how few tickets were recorded for Richmond in our sample.  
+Figure 2 shows the breakdown of the top 5 ticket types and their respected borough. We can see that "no parking" is the leading ticket type for each borough except for Richmond. Also, speeding is the second leading ticket type for each borough except for Manhattan where speeding is the least. Another interesting note is how few tickets were recorded for Richmond in our sample.  
   
 
 
@@ -53,6 +54,7 @@ We can see in figure 4 below, that the majority of the tickets given are between
 
 
 ![Imgur](https://i.imgur.com/eDOBvXg.png)
+
 *figure 4*
 
 #### Day of the Week
@@ -61,6 +63,7 @@ We can see in figure 5 that most of the tickets were written between Monday thro
 
 
 ![Imgur](https://i.imgur.com/4Q9gSia.png)
+
 *figure 5*
 
 #### Month of the Year
@@ -70,6 +73,7 @@ In figure 6 below we can see that the months of July and December are the two mo
 
 
 ![Imgur](https://i.imgur.com/wHvCTha.png)
+
 *Figure 6*
 
 ### Hour of the day VS. Day of the week
@@ -77,7 +81,7 @@ In figure 6 below we can see that the months of July and December are the two mo
 
 <iframe width="800" height="600" frameborder="0" scrolling="no" src="//plotly.com/~Terrence.bosco/15.embed"></iframe>
 *figure 7*
-* Here we can look at the distribution of tickets given in Hours vs Day of the week. We can see that the hour of the day and day of the week are consistent with our graphs above. A majority of tickets given are during the hours of 8:00am and 3:00pm during the day of Monday through Friday. With the most tickets given on Wednesdays between the hours of 1:00pm and 2:00pm.
+Here we can look at the distribution of tickets given in Hours vs Day of the week. We can see that the hour of the day and day of the week are consistent with our graphs above. A majority of tickets given are during the hours of 8:00am and 3:00pm during the day of Monday through Friday. With the most tickets given on Wednesdays between the hours of 1:00pm and 2:00pm.
 
 
 ### Day of the week VS. Month
@@ -85,12 +89,13 @@ In figure 6 below we can see that the months of July and December are the two mo
 
 <iframe width="800" height="600" frameborder="0" scrolling="no" src="//plotly.com/~Terrence.bosco/17.embed"></iframe>
 *figure 8*
-* This heat map shows the distribution of tickets for each Month and the Day of the Week for that month. This shows consistency with our graphs above that the majority of tickets were given between Monday through Friday. Also, the most tickets given during the year were Tuesdays in May.
+This heat map shows the distribution of tickets for each Month and the Day of the Week for that month. This shows consistency with our graphs above that the majority of tickets were given between Monday through Friday. Also, the most tickets given during the year were Tuesdays in May.
 
 ## Conclusion 
 
-* Our exploratory data analysis showed us that the majority of tickets given are between the hours of 8:00am and 3:00pm Monday through Friday with the most given in May. We also explored the breakdown of the ticket types and learned that the top 5 ticket types make up more that 50% of the 10,000 tickets sampled. 
-* Stay tuned to parts 2, and 3 where we explore the types of cars and where they are being ticketed.
+Our exploratory data analysis showed us that the majority of tickets given are between the hours of 8:00am and 3:00pm Monday through Friday with the most given in May. We also explored the breakdown of the ticket types and learned that the top 5 ticket types make up more that 50% of the 10,000 tickets sampled. 
+
+Stay tuned to parts 2, and 3 where we explore the types of cars and where they are being ticketed.
 
 ## Resources
 * [New York parking violation data set](https://www.kaggle.com/new-york-city/nyc-parking-tickets?select=Parking_Violations_Issued_-_Fiscal_Year_2017.csv)
