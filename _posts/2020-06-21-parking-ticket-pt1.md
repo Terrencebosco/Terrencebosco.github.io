@@ -2,7 +2,7 @@
 layout: post
 title: When are parking tickets being written?
 subtitle: An exploration into new york cities 2017 parking violation data set.
-cover-img:https://lh3.googleusercontent.com/proxy/-aJxCXmNqRa9Kmct_jmZrSUcnDT7TRCQEneYcn5gu6zgw3K-hAN540iAzV0G-CgjFdq5iW7T6j054bgwXlNsV9O4znsPyUL0SZu29bY-q7HP7TqPpXg0ZZzc1M5lF6GrtMrkdGkL0vFkLJGqTfW1Ss44ci0XUNw9qOmBjL0sBikBEZmAlrr0i3cS3iPV_KLYvKX4mvAt_INAMJ-Tx_TGVrE7fvkPaU5BSzcw9s8JNaA
+cover-img: https://www.lamar.edu/blogs/_files/images/lamar-university/2018/12/citation-forgiveness-header.jpg
 tags: [blog,build week]
 ---
 
