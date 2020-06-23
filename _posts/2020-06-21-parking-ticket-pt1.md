@@ -2,7 +2,7 @@
 layout: post
 title: When are parking tickets being written?
 subtitle: An exploration into new york cities 2017 parking violation data set.
-cover-img: https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSvTwcNZGvPOPu5K4mTKtFjVd6Ge4yA2hDF-O651AVC0RKG0cPj&usqp=CAU
+cover-img:https://lh3.googleusercontent.com/proxy/-aJxCXmNqRa9Kmct_jmZrSUcnDT7TRCQEneYcn5gu6zgw3K-hAN540iAzV0G-CgjFdq5iW7T6j054bgwXlNsV9O4znsPyUL0SZu29bY-q7HP7TqPpXg0ZZzc1M5lF6GrtMrkdGkL0vFkLJGqTfW1Ss44ci0XUNw9qOmBjL0sBikBEZmAlrr0i3cS3iPV_KLYvKX4mvAt_INAMJ-Tx_TGVrE7fvkPaU5BSzcw9s8JNaA
 tags: [blog,build week]
 ---
 
