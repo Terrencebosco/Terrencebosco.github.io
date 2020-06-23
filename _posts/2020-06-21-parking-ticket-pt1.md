@@ -81,6 +81,7 @@ In figure 6 below we can see that the months of July and December are the two mo
 
 <iframe width="800" height="600" frameborder="0" scrolling="no" src="//plotly.com/~Terrence.bosco/15.embed"></iframe>
 *figure 7*
+
 Here we can look at the distribution of tickets given in Hours vs Day of the week. We can see that the hour of the day and day of the week are consistent with our graphs above. A majority of tickets given are during the hours of 8:00am and 3:00pm during the day of Monday through Friday. With the most tickets given on Wednesdays between the hours of 1:00pm and 2:00pm.
 
 
@@ -89,6 +90,7 @@ Here we can look at the distribution of tickets given in Hours vs Day of the wee
 
 <iframe width="800" height="600" frameborder="0" scrolling="no" src="//plotly.com/~Terrence.bosco/17.embed"></iframe>
 *figure 8*
+
 This heat map shows the distribution of tickets for each Month and the Day of the Week for that month. This shows consistency with our graphs above that the majority of tickets were given between Monday through Friday. Also, the most tickets given during the year were Tuesdays in May.
 
 ## Conclusion 
