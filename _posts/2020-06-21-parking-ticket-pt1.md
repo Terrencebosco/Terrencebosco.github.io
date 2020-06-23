@@ -102,4 +102,4 @@ Stay tuned to parts 2, and 3 where we explore the types of cars and where they a
 ## Resources
 * [New York parking violation data set](https://www.kaggle.com/new-york-city/nyc-parking-tickets?select=Parking_Violations_Issued_-_Fiscal_Year_2017.csv)
 * [New York Cities Violation code breakdown](https://www1.nyc.gov/site/finance/vehicles/services-violation-codes.page)
-* [google colab note book](https://colab.research.google.com/drive/12WcZmftU4udrCZ4Xrzp38J1sO-qqKeXn?usp=sharing)
+* [google colab notebook](https://colab.research.google.com/drive/12WcZmftU4udrCZ4Xrzp38J1sO-qqKeXn?usp=sharing)
