@@ -38,4 +38,20 @@ The information im looking to gather:
 
 ## Step three, scrap the data
 
-After a HTML crash course I imported BeautifulSoup and got to work.  The main issue I ran into when trying to develop the web scrapper Is that each individual listing has its own unique url, rather than a “page1,page2,page3…” so one listing would be `vehicledetail/detail/813715333/overview/` and the next would be `vehicledetail/detail/817597633/overview/`This posed an interesting problem because I wasn’t able to form a range of the page numbers loop through vehicledetail/detail/{np.arange(1-50} /overview/ for example. I first had to loop through all the listing previews and store all the unique url values in a list. Then use the values in the list to loop through all the individual listings and gather the necessary information
+After a HTML crash course I imported BeautifulSoup and got to work.  The main issue I ran into when trying to develop the web scrapper Is that each individual listing has its own unique url, rather than a “page1,page2,page3…” so one listing would be `vehicledetail/detail/813715333/overview/` and the next would be `vehicledetail/detail/817597633/overview/`This posed an interesting problem. I wasn’t able to form a range of the page numbers and  loop through `vehicledetail/detail/{np.arange(1-50} /overview/` for example. I first had to loop through all the listing previews and store all the unique url values in a list. Then use the values in the list to loop through all the individual listings and gather the necessary information
+
+```python
+pages = np.arange(1,51)
+values = []
+
+for page in pages:
+    
+    data = requests.get('https://www.cars.com/for-sale/searchresults.action/?page='+str(page)+'&perPage=100&prMx=10000&rd=250&searchSource=PAGINATION&sort=relevance&stkTypId=28881&zc=33408')
+    soup = BeautifulSoup(data.content, 'html.parser')
+    search = soup.findAll('div', class_='listing-row__badges')
+    
+    sleep(randint(2,3))
+    
+    for post in search:
+        values.append(post['data-submit-badge'])
+```
