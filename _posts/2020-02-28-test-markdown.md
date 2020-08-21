@@ -46,7 +46,7 @@ values = []
 
 for page in pages:
     
-    data = requests.get('https://www.cars.com/for-sale/searchresults.action/?page='+str(page)+'&perPage=100&prMx=10000&rd=250&searchSource=PAGINATION&sort=relevance&stkTypId=28881&zc=33408')
+    data = requests.get('https://www.___.com/for-sale/searchresults.action/?page='+str(page)+'&perPage=100&prMx=10000&rd=250&searchSource=PAGINATION&sort=relevance&stkTypId=28881&zc=33408')
     soup = BeautifulSoup(data.content, 'html.parser')
     search = soup.findAll('div', class_='listing-row__badges')
     
@@ -54,4 +54,25 @@ for page in pages:
     
     for post in search:
         values.append(post['data-submit-badge'])
+```
+
+once those values were stored in a list I was able to loop through them by adding them to the cars listing url template. once that car listining was requested I can pull the nessisary information and store them in their own lists. 
+
+```python
+car_names = []
+car_mileage = []
+price = []
+ext_color = []
+int_color = []
+city_mpg = []
+high_mpg = []
+drivetrain = []
+transmission = []
+engine = []
+
+for value in values:
+    url = f'https://www.___.com/vehicledetail/detail/{value}/overview/'
+    data = requests.get(url)
+    soup = BeautifulSoup(data.content, 'html.parser')
+    sleep(randint(2,5))
 ```
