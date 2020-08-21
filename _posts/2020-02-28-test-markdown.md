@@ -35,3 +35,19 @@ The information im looking to gather:
 7. transmission
 8. interior color
 9. exterior color
+
+## Step three, scrap the data
+
+After a HTML crash course I imported BeautifulSoup and got to work.  The main issue I ran into when trying to develop the web scrapper Is that each individual listing has its own unique url, rather than a “page1,page2,page3…” so one listing would be 
+
+'''
+vehicledetail/detail/813715333/overview/
+'''
+
+and the next would be 
+
+'''
+vehicledetail/detail/817597633/overview/
+'''
+
+This posed an interesting problem because I wasn’t able to form a range of the page numbers loop through vehicledetail/detail/{np.arange(1-50} /overview/ for example. I first had to loop through all the listing previews and store all the unique url values in a list. Then use the values in the list to loop through all the individual listings and gather the necessary information
