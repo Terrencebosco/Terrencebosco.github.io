@@ -25,7 +25,7 @@ Under the actual listings more information is provided. Such as the fuel type, m
 
 <a href="https://imgur.com/XzDsmrm"><img src="https://i.imgur.com/XzDsmrm.png" title="source: imgur.com" /></a>
 
-The information im looking to gather vehicles make, model, price, mileage, miles per gallon, drivetrain, transmission, interior and exterior color. 
+The information im looking to gather:
 1. vehicles make
 2. vehicles model
 3. price
