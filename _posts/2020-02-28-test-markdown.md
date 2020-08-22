@@ -87,7 +87,7 @@ A majority of the data wrangling consisted of stripping unwanted characters from
 		df.loc[df['ext_color'].str.contains('Cherry'), 'ext_color'] = 'Red'
 ```
 
-I did this for each color I was able to identify. Colors I wasn’t able to identify were changed to “other”. Since the scraper pulled information even if it wasn’t correct caused there to be no missing or np.nan values. The cleaning was mostly finding rows that weren’t in the correct order and handling those. 
+I did this for each color I was able to identify. Colors I wasn’t able to identify were changed to “other”. Since the scraper pulled information even if it wasn’t correct caused there to be no missing or `np.nan` values. The cleaning was mostly finding rows that weren’t in the correct order and handling those. 
 
 <a href="https://imgur.com/PUs6hBG"><img src="https://i.imgur.com/PUs6hBG.png" title="source: imgur.com" /></a>
 
