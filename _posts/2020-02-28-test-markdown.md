@@ -111,13 +111,20 @@ Mileage is another feature that is strongly correlated with price. Although ther
 
 With these correlations and our initial question in mind we can explore these features a little more deeply. It’s important for us to understand the distribution of the data we’re working with. We’re going to be looking at 3 different distributions of data, the distribution of vehicle make, year, and mileage. 
 
-<a href="https://imgur.com/huYinug"><img src="https://i.imgur.com/huYinug.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/w5RgiVv"><img src="https://i.imgur.com/w5RgiVv.png" title="source: imgur.com" /></a>
 
 > As we can see the 3 main makes being sold at the time of data collection are;
 > 1. Nissan
 > 2. Ford
 > 3. Hyundai
 
+<a href="https://imgur.com/OL1waoz"><img src="https://i.imgur.com/OL1waoz.png" title="source: imgur.com" /></a>
+
+> The distribution of vehicles being sold show us that a majority of vehicles being sold are between 2012-2017
+
+<a href="https://imgur.com/BvELtJt"><img src="https://i.imgur.com/BvELtJt.png" title="source: imgur.com" /></a>
+
+> The distribution of mileage ended up being surprisingly normalized. I expected there to be more fluctuations between the mileages. The mean mileage for our data set is 79,113 indicated by the red vertical line.
 
 
 
