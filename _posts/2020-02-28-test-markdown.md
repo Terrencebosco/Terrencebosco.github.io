@@ -93,7 +93,9 @@ I did this for each color I was able to identify. Colors I wasn’t able to iden
 
 ## Exploratory Eata Analysis
 
+When exploring the data it’s important to keep the main question in mind. Can we predict the price of a used gasoline car, under $10,000 within 200 miles of my home? With the question in the back of our minds we can begin to explore the data in relation to the question. My first step is to make a simple correlation matrix to see the relationships of each feature with one another. I focus most of my attention to the target vector of “price” and its relations with the other features.   
 
+<a href="https://imgur.com/7xqQY88"><img src="https://i.imgur.com/7xqQY88.png" title="source: imgur.com" /></a>
 
 
 
