@@ -77,7 +77,7 @@ for value in values:
     sleep(randint(2,5))
 ```
 
-# Part 2: Data Wrangling, Feature Engineering, EDA, and Feature Selection 
+# Part 2: Cleaning and Exploring Data 
 
 ## Data Wrangling 
 
@@ -91,7 +91,7 @@ I did this for each color I was able to identify. Colors I wasn’t able to iden
 
 <a href="https://imgur.com/PUs6hBG"><img src="https://i.imgur.com/PUs6hBG.png" title="source: imgur.com" /></a>
 
-
+## Exploratory Eata Analysis
 
 
 
