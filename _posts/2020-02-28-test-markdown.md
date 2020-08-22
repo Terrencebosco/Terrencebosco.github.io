@@ -216,3 +216,8 @@ print('Validation Accuracy', mae)
 Test Mean Absolute Error: 950.618
 ```
 After we ran our model again with the testing set we ended up with a mean absolute error of 950.618. That’s an even better score than our validation set by about 10 points. I would consider that a win!
+
+
+# Part 6: The Good, The Bad, The Ugly
+
+Even though I was able to beat my baseline prediction by almost 500 point I think with a little more work that can be improved upon. If I were to do this project over there are numerus factors that I would try and improve on. I would try and collect more data. I think with more data and more vehicles I would be able to make a better predictor. I would build a better scrapping method and account for missing values. The main issue that this project runs into is ultimately the lack of data. Having only 2000 different vehicles in my data set makes it difficult to get an accurate prediction. That being said my main focus was to learn and test myself and I feel I did just that.
