@@ -164,10 +164,11 @@ y_pred2 = pipeline.predict(X_train)
 ```
 With this simple RandomforestRegressor model I was able to lower my mean absolute error to 979.80 on my validation set. That’s almost a 500 point reduction! I believe this to be a great improvement of baseline. I was able to lower the error by almost a third with a simple predictive model with no hyper parameters tuned, no feature selection, and no cross validation. 
 
+Once I was able to beat baseline my goal was to make a simpler model in the sense of the number of features used and still beat my first model. To conduct the feature importance with the eli5 API on the first RandomForestRegressor model to see what features contributed the most to the prediction. 
 
+<a href="https://imgur.com/JuyhEIY"><img src="https://i.imgur.com/JuyhEIY.png" title="source: imgur.com" /></a>
 
-
-
+> Here we can see the weight the RandomForsetRegressor places on each feature and its standard deviation as well as the feature associated with the weight. As to be expected year and mileage contribute the most to the price prediction of the used vehicle. Another interesting point is the `front_wheel_drive` feature. This feature actually made out model worse by being included. I used 13 as an arbitrary threshold to remove the features that didn’t contribute as much or even negatively to the mode. Then conducted a new model with new hyper parameters and the top 8 features. 
 
 
 
