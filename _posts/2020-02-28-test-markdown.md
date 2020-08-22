@@ -109,9 +109,14 @@ Mileage is another feature that is strongly correlated with price. Although ther
 
 > This is another situation where the findings aren’t necessarily surprising given the type of data we’re working with but the finding is just as important. There are two things I’m looking for when I conduct exploratory data analysis. The first being information that I presume to be true and the data reflecting those presumptions. Secondly, is there any unexpected connections that I didn’t see coming, and if there is why are they connected. For the case of Mileage vs Price we can see that mileage has a negative impact on price. The higher the mileage the lower the price. This is something that I can assume to be true without conducting any analysis of the data. The exploration just confirms my expectations. 
 
+With these correlations and our initial question in mind we can explore these features a little more deeply. It’s important for us to understand the distribution of the data we’re working with. We’re going to be looking at 3 different distributions of data, the distribution of vehicle make, year, and mileage. 
 
+<a href="https://imgur.com/huYinug"><img src="https://i.imgur.com/huYinug.png" title="source: imgur.com" /></a>
 
-
+> As we can see the 3 main makes being sold at the time of data collection are;
+> 1. Nissan
+> 2. Ford
+> 3. Hyundai
 
 
 
