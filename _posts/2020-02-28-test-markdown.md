@@ -97,10 +97,11 @@ When exploring the data it’s important to keep the main question in mind. Can 
 
 <a href="https://imgur.com/7xqQY88"><img src="https://i.imgur.com/7xqQY88.png" title="source: imgur.com" /></a>
 
+Based on the correlation matrix I was able to identify specific relationships between the target (price) and the other features. The first of which is the relation between price and year (cars model year).
 
+<a href="https://imgur.com/Ewt6wAe"><img src="https://i.imgur.com/Ewt6wAe.png" title="source: imgur.com" /></a>
 
-
-
+> Based on this scatter plot we can see that there is a relationship between the price of the used car and the model year. As the year of the car goes up the price goes up, so there is a positive correlation between price and year. This isn’t necessarily a ground breaking discovery but it does help answer the question. Based on domain knowledge of vehicles it’s safe to assume that the newer the car the higher the price. So we were able to confirm our expectations of the data set. If we found the opposite to be true, year was negatively correlated to price, I would be suspicious of the data set. With our data meeting our expectations of what we “think” the data will look like is just as useful to us as finding something unexpected.  
 
 
 
