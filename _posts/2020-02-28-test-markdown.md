@@ -187,7 +187,7 @@ Validation Mean Absolute Error: 960.059
 
 With the new model with less features, and better tuned hyper parameters I was able to lower the mean absolute error of the validation set to 960.06. That’s another 20 points of reduction with simply selecting the features, and tuning the models settings. 
 
-# Interpretation
+# Part 4: Interpretation
 I’m using a RandomForestRegressor model that are commonly referred to as black box models. Black box models are notoriously hard to explain because we don’t exactly know how the determinations are being made. Even those they are hard to interpret the models there are tools available to use that we can use to gain better insight. In this case we can use partial dependencies and shap values to evaluate and explain our model. 
 
 ## partial Dependency
@@ -196,3 +196,23 @@ We can look at the partial dependency or functional relationship between feature
 <a href="https://imgur.com/9u08qPJ"><img src="https://i.imgur.com/9u08qPJ.png" title="source: imgur.com" /></a>
 
 > We can see how the model uses the mileage and year of the vehicle to predict the price using the pdp interaction plot. We can see that the cheapest vehicles predicted are those with the highest mileage and earliest year. The most expensive cars those that are newer with lower mileage. 
+
+## Shap Values
+We can use shap values as a form of coefficient to help explain how each feature reacts with our model. The shap values interpret the impact a particular value of a particular feature will have on our model. 
+
+<a href="https://imgur.com/OXj0cdx"><img src="https://i.imgur.com/OXj0cdx.png" title="source: imgur.com" /></a>
+
+> We can see that any values to the left of the 0 base line negatively affect the value of the prediction and values on the right of the 0 affect the prediction in the positive direction. Then we have to look and see the value of each point and how they are distributed across the 0 baseline. Mileage values that are higher negatively affect the prediction and vis versa for lower values. We can interpret this by cars with lower mileage are predicted to cost more. Values for car year that are low negatively affect the prediction price, and values that are high positively effect the predicted price. We can interpret this as new cars are predicted to cost more. 
+
+# Part 5: The Final Prediction 
+After gathering the data, exploring the data, testing validation sets, and interpreting the models the only thing left to do Is predict with the testing set. Im going to use the feature selected model to predict my testing set, with the same parameters and encoders. This is entirely new information that the model has yet to see and will let us know how well the model generalizes predictions. 
+
+```python
+pipeline.fit(X_train_perm,y_train)
+y_pred = pipeline.predict(X_test_perm)
+mae = mean_absolute_error(y_test,y_pred)
+print('Validation Accuracy', mae)
+
+Test Mean Absolute Error: 950.618
+```
+After we ran our model again with the testing set we ended up with a mean absolute error of 950.618. That’s an even better score than our validation set by about 10 points. I would consider that a win!
