@@ -101,11 +101,13 @@ Based on the correlation matrix I was able to identify specific relationships be
 
 <a href="https://imgur.com/Ewt6wAe"><img src="https://i.imgur.com/Ewt6wAe.png" title="source: imgur.com" /></a>
 
-> Based on this scatter plot we can see that there is a relationship between the price of the used car and the model year. As the year of the car goes up the price goes up, so there is a positive correlation between price and year. This isn’t necessarily a ground breaking discovery but it does help answer the question. Based on domain knowledge of vehicles it’s safe to assume that the newer the car the higher the price. So we were able to confirm our expectations of the data set. If we found the opposite to be true, year was negatively correlated to price, I would be suspicious of the data set. With our data meeting our expectations of what we “think” the data will look like is just as useful to us as finding something unexpected.  
+> Based on this scatter plot we can see that there is a relationship between the price of the used car and the model year. As the year of the car goes up the price goes up, so there is a positive correlation between price and year. This isn’t necessarily a ground breaking discovery but it does help answer the question. Based on domain knowledge of vehicles it’s safe to assume that the newer cars are expected to have higher prices. So we were able to confirm our expectations of the data set. If we found the opposite to be true, year was negatively correlated to price, I would be suspicious of the data set. With our data meeting our expectations of what we “think” the data will look like is just as useful to us as finding something unexpected.  
 
+Mileage is another feature that is strongly correlated with price. Although there is a key difference between the way year and mileage react with price. We saw that there is a positive relationship between year and price, but mileage on the other hand has a negative relationship with price. 
+ 
+<a href="https://imgur.com/OUM6TCV"><img src="https://i.imgur.com/OUM6TCV.png" title="source: imgur.com" /></a>
 
-
-
+> This is another situation where the findings aren’t necessarily surprising given the type of data we’re working with but the finding is just as important. There are two things I’m looking for when I conduct exploratory data analysis. The first being information that I presume to be true and the data reflecting those presumptions. Secondly, is there any unexpected connections that I didn’t see coming, and if there is why are they connected. For the case of Mileage vs Price we can see that mileage has a negative impact on price. The higher the mileage the lower the price. This is something that I can assume to be true without conducting any analysis of the data. The exploration just confirms my expectations. 
 
 
 
