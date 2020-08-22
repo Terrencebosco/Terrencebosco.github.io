@@ -126,13 +126,43 @@ With these correlations and our initial question in mind we can explore these fe
 
 > The distribution of mileage ended up being surprisingly normalized. I expected there to be more fluctuations between the mileages. The mean mileage for our data set is 79,113 indicated by the red vertical line.
 
+# Part 3: Model Creation and Feature Selection
 
+# Baseline Model
+The metric of measurement for model evaluation I’ll be using is the Mean Absolut Error. We can use this to get a baseline of prediction based on the characteristics of each vehicle. To do that ill start with the mean price (8041.36) and use that as a baseline prediction of each vehicle and see how far off I would be using the mean absolute error. 
 
+```python
+# get base line prediction and mean absolute error score
 
+#. get mean
+price_mean = train['price'].mean()
 
+#. get prediction with mean
+y_pred = [price_mean] * len(train['price'])
 
+#. get base line score
+baseline = mean_absolute_error(y_pred,train['price'])
+```
 
+> With this method used we get a mean absolute error of 1429.20. This can be expressed as “if we guess the mean price for the actual price of the vehicle we will be off on average by $1400”. With a little supervised machine learning we can do better. 
 
+# A Simple Model
+Once we had a baseline of prediction we have a target to beat. With supervised machine learning I want to be able to score better than my baseline model. A better score would tell me that I am able to better generalize a prediction than I am just guessing. For my predictive model I’ll be using RandomForestRegressor from the sklearn library. I split my data into 3 parts, training data, validation data, and testing data. 
+
+```python
+# simple predictive model
+pipeline = make_pipeline(
+    ce.OrdinalEncoder(),
+    RandomForestRegressor( random_state=42,
+                          n_jobs=-1)
+)
+
+# simple prediction
+pipeline.fit(X_train, y_train);
+y_pred = pipeline.predict(X_val)
+y_pred2 = pipeline.predict(X_train)
+```
+With this simple RandomforestRegressor model I was able to lower my mean absolute error to 979.80 on my validation set. That’s almost a 500 point reduction! I believe this to be a great improvement of baseline. I was able to lower the error by almost a third with a simple predictive model with no hyper parameters tuned, no feature selection, and no cross validation. 
 
 
 
