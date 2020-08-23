@@ -167,7 +167,7 @@ Validation Mean Absolute Error: 979.80
 With this simple RandomforestRegressor model I was able to lower my mean absolute error to 979.80 on my validation set. That’s almost a 500 point reduction! I believe this to be a great improvement of baseline. I was able to lower the error by almost a third with a simple predictive model with no hyper parameters tuned, no feature selection, and no cross validation. 
 
 ## Feature Selection
-Once I was able to beat baseline my goal was to make a simpler model in the sense of the number of features used and still beat my first model. To conduct the feature importance with the eli5 API on the first RandomForestRegressor model to see what features contributed the most to the prediction. 
+Once I was able to beat baseline my goal was to make a simpler model in the sense of the number of features used and still beat my first model. I conducted the feature importance with the eli5 API permutaion importance on the first RandomForestRegressor model to see what features contributed the most to the prediction. 
 
 <a href="https://imgur.com/JuyhEIY"><img src="https://i.imgur.com/JuyhEIY.png" title="source: imgur.com" /></a>
 
