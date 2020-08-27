@@ -9,7 +9,7 @@ Titanic, Boston house prices, and iris flower. These are all data sets an aspiri
 
 # Part 1: Data Collection
 
-## Step 0ne, ask the question. 
+## Step One, ask the question. 
 
 The first step was to figure out the question I wanted to answer. After some deliberation I settled on trying to predict used car prices based on the cars characteristics. I went to a popular new and used car website to gather my data. I narrowed the search parameters to cars that are used, less than $10,000, and within 100 miles of my home. 
 
