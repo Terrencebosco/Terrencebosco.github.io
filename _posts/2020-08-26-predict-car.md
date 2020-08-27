@@ -5,21 +5,21 @@ subtitle: Predicting used car prices with web scrapped data
 tags: [blog,build week 2,predictive]
 comments: true
 ---
-Titanic, Boston house prices, iris flower. These are all data sets an aspiring data scientist is more than then familiar with. After completing YouTube tutorials and lectures of these data sets I found myself scrolling through Kaggle or UCI Machine Learning Repository looking for a practice dataset to test my newly gained knowledge of supervised machine learning. As I read description after description I kept coming back to the same question “how are these datasets made?”. After a quick google search I discovered the world of web scraping using python. After reading two articles, a full cup of coffee and a blank jupyter notebook I got to work creating a predictive model from scratch as a proof of concept to myself.
+Titanic, Boston house prices, and iris flower. These are all data sets an aspiring data scientist is more than familiar with. After completing YouTube tutorials and lectures of these data sets I found myself scrolling through Kaggle or UCI Machine Learning Repository looking for a practice dataset to test my newly gained knowledge of supervised machine learning. As I read description after description I kept coming back to the same question “how are these datasets made?”. After a quick google search I discovered the world of web scraping using python. After reading two articles, a full cup of coffee and a blank jupyter notebook I got to work creating a predictive model from scratch as a proof of concept to myself.
 
-# Part 1: Data collection
+# Part 1: Data Collection
 
-## Step one, ask the question 
+## Step 0ne, ask the question. 
 
-The first step was to figure out the question I wanted to answer. After some deliberation I settled on trying to predict used car prices based on the cars characteristics. I went to a popular new and used car website so gather my data. I narrowed the search parameters to cars that are used, less than $10,000, and within 100 miles of my home. 
+The first step was to figure out the question I wanted to answer. After some deliberation I settled on trying to predict used car prices based on the cars characteristics. I went to a popular new and used car website to gather my data. I narrowed the search parameters to cars that are used, less than $10,000, and within 100 miles of my home. 
 
-## Step two, what sort of information do I need?
+## Step Two, what sort of information do I need?
 
-The used car website breaks the listings into two parts. The first page is a 20 of the listings under the parameters I those (the preview). Then each of those individual listings will take you to the specific listing for that car (the listing). The previews give the basic information about the vehicles make, model, price, mileage, color, the transmission type, and the drivetrain. 
+The used car website breaks the listings into two parts. The first page is 20 of the listings under the parameters I chose (the preview). Then each of those individual listings will take you to the specific listing for that car (the listing). The previews give the basic information about the vehicles make, model, price, mileage, color, the transmission type, and the drivetrain. 
 
 > <a href="https://imgur.com/LQWGTL4"><img src="https://i.imgur.com/LQWGTL4.png" title="source: imgur.com" /></a>
 
-Under the actual listings more information is provided. Such as the fuel type, miles per gallon city and highway, engine type and size, and a more descriptive transmission listing. 
+Under the actual listings more information is provided. Such as the fuel type, miles per gallon city and highway, engine type/size, and a more descriptive transmission listing. 
 
 > <a href="https://imgur.com/XzDsmrm"><img src="https://i.imgur.com/XzDsmrm.png" title="source: imgur.com" /></a>
 
@@ -34,9 +34,9 @@ The information im looking to gather:
 8. interior color
 9. exterior color
 
-## Step three, scrap the data
+## Step Three, scrape the data.
 
-After a HTML crash course I imported BeautifulSoup and got to work.  The main issue I ran into when trying to develop the web scrapper Is that each individual listing has its own unique url, rather than a “page1,page2,page3…” so one listing would be `vehicledetail/detail/813715333/overview/` and the next would be `vehicledetail/detail/817597633/overview/`This posed an interesting problem. I wasn’t able to form a range of the page numbers and  loop through `vehicledetail/detail/{np.arange(1-50} /overview/` for example. I first had to loop through all the listing previews and store all the unique url values in a list. Then use the values in the list to loop through all the individual listings and gather the necessary information
+After a HTML crash course I imported BeautifulSoup and got to work.  The main issue I ran into when trying to develop the web scrapper is that each individual listing has its own unique url, rather than a “page1,page2,page3…” so one listing would be `vehicledetail/detail/813715333/overview/` and the next would be `vehicledetail/detail/817597633/overview/`This posed an interesting problem. I wasn’t able to form a range of the page numbers and  loop through them for example `vehicledetail/detail/{np.arange(1-50)} /overview/`. I first had to loop through all the listing previews and store all the unique url values in a list. Then use the values in the list to loop through all the individual listings and gather the necessary information
 
 ```python
 pages = np.arange(1,51)
@@ -54,7 +54,7 @@ for page in pages:
         values.append(post['data-submit-badge'])
 ```
 
-once those values were stored in a list I was able to loop through them by adding them to the cars listing url template. once that car listining was requested I can pull the nessisary information and store them in their own lists. 
+once those values were stored in a list I was able to loop through them by adding them to the cars listing url template. Once that car listing was requested I can pull the necessary information and store them in their own lists. 
 
 ```python
 car_names = []
@@ -79,23 +79,23 @@ for value in values:
 
 ## Data Wrangling 
 
-A majority of the data wrangling consisted of stripping unwanted characters from the data. There was also numerous rows that were out of order. When scrapping the data some of the elements were missing and added elements to the wrong list. A majority of my time was spend looking for elements that weren’t in the correct format and either cleaning them or deleting the row if there wasn’t enough usable data. Another factor I didn’t consider when scraping the data was that the exterior color has different names for different makes. I took those colors and changed them to a more general label. For example 
+A majority of the data wrangling consisted of stripping unwanted characters from the data. There were also numerous rows that were out of order. When scrapping the data some of the elements were missing and added elements to the wrong list. A majority of my time was spent looking for elements that weren’t in the correct format and either cleaning them or deleting the row if there wasn’t enough usable data. Another factor I didn’t consider when scraping the data was that the exterior color has different names for different makes. I took those colors and changed them to a more general label. For example:
 
 ```python
 		df.loc[df['ext_color'].str.contains('Cherry'), 'ext_color'] = 'Red'
 ```
 
-I did this for each color I was able to identify. Colors I wasn’t able to identify were changed to “other”. Since the scraper pulled information even if it wasn’t correct caused there to be no missing or `np.nan` values. The cleaning was mostly finding rows that weren’t in the correct order and handling those. 
+I did this for each color I was able to identify. Colors I wasn’t able to identify were changed to “other”. Since the scraper pulled information even if it wasn’t correct it caused no missing or `np.nan` values. The cleaning was mostly finding rows that weren’t in the correct order and handling those.
 
 <a href="https://imgur.com/PUs6hBG"><img src="https://i.imgur.com/PUs6hBG.png" title="source: imgur.com" /></a>
-
+> data after wrangling.
 ## Exploratory Data Analysis
 
-When exploring the data it’s important to keep the main question in mind. Can we predict the price of a used gasoline car, under $10,000 within 200 miles of my home? With the question in the back of our minds we can begin to explore the data in relation to the question. My first step is to make a simple correlation matrix to see the relationships of each feature with one another. I focus most of my attention to the target vector of “price” and its relations with the other features.   
+When exploring the data it’s important to keep the main question in mind. Can we predict the price of a used gasoline car, under $10,000 within 100 miles of my home? With the question in mind we can begin to explore the data in relation to the question. My first step is to make a simple correlation matrix to see the relationships of each feature with one another. I focus most of my attention to the target vector of “price” and its relations with the other features.   
 
 <a href="https://imgur.com/7xqQY88"><img src="https://i.imgur.com/7xqQY88.png" title="source: imgur.com" /></a>
 
-Based on the correlation matrix I was able to identify specific relationships between the target (price) and the other features. The first of which is the relation between price and year (cars model year).
+Based on the correlation matrix I was able to identify specific relationships between the target (price) and the other features. The first of which is the relation between price and year (car's model year).
 
 <a href="https://imgur.com/Ewt6wAe"><img src="https://i.imgur.com/Ewt6wAe.png" title="source: imgur.com" /></a>
 
@@ -105,20 +105,20 @@ Mileage is another feature that is strongly correlated with price. Although ther
  
 <a href="https://imgur.com/OUM6TCV"><img src="https://i.imgur.com/OUM6TCV.png" title="source: imgur.com" /></a>
 
-> This is another situation where the findings aren’t necessarily surprising given the type of data we’re working with but the finding is just as important. There are two things I’m looking for when I conduct exploratory data analysis. The first being information that I presume to be true and the data reflecting those presumptions. Secondly, is there any unexpected connections that I didn’t see coming, and if there is why are they connected. For the case of Mileage vs Price we can see that mileage has a negative impact on price. The higher the mileage the lower the price. This is something that I can assume to be true without conducting any analysis of the data. The exploration just confirms my expectations. 
+> This is another situation where the findings aren’t necessarily surprising given the type of data we’re working with but the finding is just as important. There are two things I’m looking for when I conduct exploratory data analysis. The first being information that I presume to be true and the data reflecting those presumptions. Secondly, is there any unexpected connections that I didn’t see coming, and if there were why are they connected? For the case of Mileage vs Price we can see that mileage has a negative impact on price. The higher the mileage, the lower the price. This is something that I can assume to be true without conducting any analysis of the data. The exploration just confirms my expectations. 
 
-With these correlations and our initial question in mind we can explore these features a little more deeply. It’s important for us to understand the distribution of the data we’re working with. We’re going to be looking at 3 different distributions of data, the distribution of vehicle make, year, and mileage. 
+With these correlations and our initial question in mind we can explore these features a little more deeply. It’s important for us to understand the distribution of the data we’re working with. We’re going to be looking at 3 different distributions of the data vehicle make, year, and mileage. 
 
 <a href="https://imgur.com/w5RgiVv"><img src="https://i.imgur.com/w5RgiVv.png" title="source: imgur.com" /></a>
 
-> As we can see the 3 main makes being sold at the time of data collection are;
+> As we can see the 3 main makes being sold at the time of data collection are:
 > 1. Nissan
 > 2. Ford
 > 3. Hyundai
 
 <a href="https://imgur.com/OL1waoz"><img src="https://i.imgur.com/OL1waoz.png" title="source: imgur.com" /></a>
 
-> The distribution of vehicles being sold show us that a majority of vehicles being sold are between 2012-2017
+> The distribution of vehicles being sold shows us that a majority of vehicles being sold are between 2012-2017
 
 <a href="https://imgur.com/BvELtJt"><img src="https://i.imgur.com/BvELtJt.png" title="source: imgur.com" /></a>
 
@@ -127,7 +127,7 @@ With these correlations and our initial question in mind we can explore these fe
 # Part 3: Model Creation and Feature Selection
 
 ## Baseline Model
-The metric of measurement for model evaluation I’ll be using is the Mean Absolut Error. We can use this to get a baseline of prediction based on the characteristics of each vehicle. To do that ill start with the mean price (8041.36) and use that as a baseline prediction of each vehicle and see how far off I would be using the mean absolute error. 
+The metric of measurement for model evaluation I’ll be using is the ```mean_absolute_error```. We can use this to get a baseline prediction based on the characteristics of each vehicle. To do that i'll start with the mean price (8041.36) and use that as a baseline prediction of each vehicle and see how far off I would be using the mean absolute error. 
 
 ```python
 # get base line prediction and mean absolute error score
@@ -142,10 +142,10 @@ y_pred = [price_mean] * len(train['price'])
 baseline = mean_absolute_error(y_pred,train['price'])
 ```
 
-> With this method used we get a mean absolute error of 1429.20. This can be expressed as “if we guess the mean price for the actual price of the vehicle we will be off on average by $1400”. With a little supervised machine learning we can do better. 
+> With this method used we get a mean absolute error of 1429.20. This can be expressed as “if we guess the mean price for the actual price of the vehicle we will be off on average by $1400”. With a little supervised machine learning we can do better!
 
 ## A Simple Model
-Once we had a baseline of prediction we have a target to beat. With supervised machine learning I want to be able to score better than my baseline model. A better score would tell me that I am able to better generalize a prediction than I am just guessing. For my predictive model I’ll be using RandomForestRegressor from the sklearn library. I split my data into 3 parts, training data, validation data, and testing data. 
+Once we have a baseline prediction we have a target to beat. With supervised machine learning I want to be able to score better than my baseline model. A better score would tell me that I am able to better generalize a prediction than just guessing mean. For my predictive model I’ll be using RandomForestRegressor from the scikit-learn library. I split my data into 3 parts, training data, validation data, and testing data. 
 
 ```python
 # simple predictive model
@@ -162,14 +162,14 @@ y_pred2 = pipeline.predict(X_train)
 
 Validation Mean Absolute Error: 979.80
 ```
-With this simple RandomforestRegressor model I was able to lower my mean absolute error to 979.80 on my validation set. That’s almost a 500 point reduction! I believe this to be a great improvement of baseline. I was able to lower the error by almost a third with a simple predictive model with no hyper parameters tuned, no feature selection, and no cross validation. 
+With this simple RandomForestRegressor model I was able to lower my mean absolute error to 979.80 on my validation set. That’s almost a 500 point reduction! I was able to lower the error by almost a third with a simple predictive model with no hyper parameters tuned, no feature selection, and no cross validation. 
 
 ## Feature Selection
 Once I was able to beat baseline my goal was to make a simpler model in the sense of the number of features used and still beat my first model. I conducted the feature importance with the eli5 API permutaion importance on the first RandomForestRegressor model to see what features contributed the most to the prediction. 
 
 <a href="https://imgur.com/JuyhEIY"><img src="https://i.imgur.com/JuyhEIY.png" title="source: imgur.com" /></a>
 
-Here we can see the weight the RandomForsetRegressor places on each feature and its standard deviation as well as the feature associated with the weight. As to be expected year and mileage contribute the most to the price prediction of the used vehicle. Another interesting point is the `front_wheel_drive` feature. This feature actually made out model worse by being included. I used 13 as an arbitrary threshold to remove the features that didn’t contribute as much or even negatively to the mode. Then conducted a new model with new hyper parameters and the top 8 features. 
+Here we can see the weight the RandomForsetRegressor places on each feature and its standard deviation as well as the feature associated with the weight. As to be expected year and mileage contribute the most to the price prediction of the used vehicle. Another interesting point is the `front_wheel_drive` feature. This feature actually made our model worse by being included. I used 13 as an arbitrary threshold to remove the features that didn’t contribute as much or even negatively to the model. Then constructed a new model with new hyper parameters and the top 8 features. 
 
 ```python
 # fit model with features > 13 (importance)
@@ -183,24 +183,24 @@ pipeline = make_pipeline(
 Validation Mean Absolute Error: 960.059
 ```
 
-With the new model with less features, and better tuned hyper parameters I was able to lower the mean absolute error of the validation set to 960.06. That’s another 20 points of reduction with simply selecting the features, and tuning the models settings. 
+With the new model I was able to lower the mean absolute error of the validation set to 960.06. That’s another 20 points of reduction with simply selecting the features, and tuning the model's settings. 
 
 # Part 4: Interpretation
-I’m using a RandomForestRegressor model that are commonly referred to as black box models. Black box models are notoriously hard to explain because we don’t exactly know how the determinations are being made. Even those they are hard to interpret the models there are tools available to use that we can use to gain better insight. In this case we can use partial dependencies and shap values to evaluate and explain our model. 
+I’m using a RandomForestRegressor model that are commonly referred to as black box models. Black box models are notoriously hard to explain because we don’t exactly know how the determinations are being made. Even though they are hard to interpret, there are tools available that we can use to gain better insight on how they work. In this case we can use partial dependencies and shap values to evaluate and explain our model. 
 
-## partial Dependency
-We can look at the partial dependency or functional relationship between features and our models two most important features (mileage and year).
+## Partial Dependency
+We can look at the partial dependency or functional relationship between features.The models two most important features are mileage and year. We can use partial dependency to see their inpact on price.
 
 <a href="https://imgur.com/9u08qPJ"><img src="https://i.imgur.com/9u08qPJ.png" title="source: imgur.com" /></a>
 
-> We can see how the model uses the mileage and year of the vehicle to predict the price using the pdp interaction plot. We can see that the cheapest vehicles predicted are those with the highest mileage and earliest year. The most expensive cars those that are newer with lower mileage. 
+> We can see how the model uses the mileage and year of the vehicle to predict the price using the pdp interaction plot. We can see that the cheapest vehicles predicted are those with the highest mileage and earliest year. The most expensive cars are those that are newer with lower mileage. 
 
 ## Shap Values
 We can use shap values as a form of coefficient to help explain how each feature reacts with our model. The shap values interpret the impact a particular value of a particular feature will have on our model. 
 
 <a href="https://imgur.com/OXj0cdx"><img src="https://i.imgur.com/OXj0cdx.png" title="source: imgur.com" /></a>
 
-> We can see that any values to the left of the 0 base line negatively affect the value of the prediction and values on the right of the 0 affect the prediction in the positive direction. Then we have to look and see the value of each point and how they are distributed across the 0 baseline. Mileage values that are higher negatively affect the prediction and vis versa for lower values. We can interpret this by cars with lower mileage are predicted to cost more. Values for car year that are low negatively affect the prediction price, and values that are high positively effect the predicted price. We can interpret this as new cars are predicted to cost more. 
+> We can see that any values to the left of the 0 baseline negatively affect the value of the prediction and values on the right of the 0 affect the prediction in the positive direction. Then we have to look and see the value of each point and how they are distributed across the 0 baseline. Mileage values that are higher negatively affect the prediction and vice versa for lower values. We can interpret this by "cars with lower mileage are predicted to cost more". Values for car year that are low negatively affect the prediction price and values that are high positively affect the predicted price. We can interpret this as "new cars are predicted to cost more". 
 
 # Part 5: The Final Prediction 
 After gathering the data, exploring the data, testing validation sets, and interpreting the models the only thing left to do Is predict with the testing set. Im going to use the feature selected model to predict my testing set, with the same parameters and encoders. This is entirely new information that the model has yet to see and will let us know how well the model generalizes predictions. 
@@ -218,4 +218,4 @@ After we ran our model again with the testing set we ended up with a mean absolu
 
 # Part 6: The Good, The Bad, The Ugly
 
-Even though I was able to beat my baseline prediction by almost 500 point I think with a little more work that can be improved upon. If I were to do this project over there are numerus factors that I would try and improve on. I would try and collect more data. I think with more data and more vehicles I would be able to make a better predictor. I would build a better scrapping method and account for missing values. The main issue that this project runs into is ultimately the lack of data. Having only 2000 different vehicles in my data set makes it difficult to get an accurate prediction. That being said my main focus was to learn and test myself and I feel I did just that.
+Even though I was able to beat my baseline prediction by about 500 points I think with a little more work that can be improved upon. If I were to do this project over there are numerous factors that I would try and improve on. I would try and collect more data. I think with more data and more vehicles I would be able to make a better predictor. I would build a better scrapping method and account for missing values. The main issue that this project runs into is ultimately the lack of data. Having only 2000 different vehicles in my data set makes it difficult to get an accurate predictions.
