@@ -9,11 +9,11 @@ Titanic, Boston house prices, and iris flower. These are all data sets an aspiri
 
 # Part 1: Data Collection
 
-## Step One, ask the question. 
+## Step One, Ask the question. 
 
 The first step was to figure out the question I wanted to answer. After some deliberation I settled on trying to predict used car prices based on the cars characteristics. I went to a popular new and used car website to gather my data. I narrowed the search parameters to cars that are used, less than $10,000, and within 100 miles of my home. 
 
-## Step Two, what sort of information do I need?
+## Step Two, What sort of information do I need?
 
 The used car website breaks the listings into two parts. The first page is 20 of the listings under the parameters I chose (the preview). Then each of those individual listings will take you to the specific listing for that car (the listing). The previews give the basic information about the vehicles make, model, price, mileage, color, the transmission type, and the drivetrain. 
 
@@ -34,7 +34,7 @@ The information im looking to gather:
 8. interior color
 9. exterior color
 
-## Step Three, scrape the data.
+## Step Three, Scrape the data.
 
 After a HTML crash course I imported BeautifulSoup and got to work.  The main issue I ran into when trying to develop the web scrapper is that each individual listing has its own unique url, rather than a “page1,page2,page3…” so one listing would be `vehicledetail/detail/813715333/overview/` and the next would be `vehicledetail/detail/817597633/overview/`This posed an interesting problem. I wasn’t able to form a range of the page numbers and  loop through them for example `vehicledetail/detail/{np.arange(1-50)} /overview/`. I first had to loop through all the listing previews and store all the unique url values in a list. Then use the values in the list to loop through all the individual listings and gather the necessary information
 
