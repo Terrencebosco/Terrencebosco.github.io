@@ -210,7 +210,7 @@ After gathering the data, exploring the data, testing validation sets, and inter
 pipeline.fit(X_train_perm,y_train)
 y_pred = pipeline.predict(X_test_perm)
 mae = mean_absolute_error(y_test,y_pred)
-print('Test Absolute Error:', mae)
+print('Test Mean Absolute Error:', mae)
 
 Test Mean Absolute Error: 950.618
 ```
