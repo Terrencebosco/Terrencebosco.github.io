@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Predictive modeling from scratch  
-subtitle: Predicting used car prices with web scrapped data
+title: Predictive Modeling From Scratch  
+subtitle: Predicting used car prices with web scrapped data.
+cover-img: https://www.autolist.com/6tuem73u73an/K8NOKYJ2aOYmm8Yc2suQU/f6a9695af3a32ea572880dcb84212c7f/buying-used-car-1166-image.jpg 
 tags: [blog,build week 2,predictive]
 comments: true
 ---
