@@ -219,3 +219,6 @@ After we ran our model again with the testing set we ended up with a mean absolu
 # Part 6: The Good, The Bad, The Ugly
 
 Even though I was able to beat my baseline prediction by about 500 points I think with a little more work that can be improved upon. If I were to do this project over there are numerous factors that I would try and improve on. I would try and collect more data. I think with more data and more vehicles I would be able to make a better predictor. I would build a better scrapping method and account for missing values. The main issue that this project runs into is ultimately the lack of data. Having only 2000 different vehicles in my data set makes it difficult to get an accurate predictions.
+
+## Resources
+[Github repository](https://github.com/Terrencebosco/Build_week_2)
