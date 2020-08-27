@@ -83,7 +83,7 @@ for value in values:
 A majority of the data wrangling consisted of stripping unwanted characters from the data. There were also numerous rows that were out of order. When scrapping the data some of the elements were missing and added elements to the wrong list. A majority of my time was spent looking for elements that weren’t in the correct format and either cleaning them or deleting the row if there wasn’t enough usable data. Another factor I didn’t consider when scraping the data was that the exterior color has different names for different makes. I took those colors and changed them to a more general label. For example:
 
 ```python
-		df.loc[df['ext_color'].str.contains('Cherry'), 'ext_color'] = 'Red'
+df.loc[df['ext_color'].str.contains('Cherry'), 'ext_color'] = 'Red'
 ```
 
 I did this for each color I was able to identify. Colors I wasn’t able to identify were changed to “other”. Since the scraper pulled information even if it wasn’t correct it caused no missing or `np.nan` values. The cleaning was mostly finding rows that weren’t in the correct order and handling those.
