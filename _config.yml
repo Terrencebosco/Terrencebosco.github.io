@@ -1,7 +1,7 @@
 # --- Basic options --- #
 
 # Name of website
-title: My website
+title: Bosco Blog
 
 # Short description of your site
 description: A virtual proof that I'm awesome
@@ -14,9 +14,8 @@ author: Some Person
 navbar-links:
   About Me: "aboutme"
   Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+    - Kaggle: "Kaggle.com"
+  Author's home: "https://www.linkedin.com/in/terrence-bosco/"
 
 # --- Logo --- #
 
@@ -44,7 +43,7 @@ social-network-links:
   twitter: "@terrencebosco"
   rss: true
 #  reddit: yourname
-#  linkedin: daattali
+  linkedin: https://www.linkedin.com/in/terrence-bosco/
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
