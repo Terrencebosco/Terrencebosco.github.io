@@ -41,7 +41,7 @@ social-network-links:
 #   facebook: deanattali
   github: Terrencebosco
   twitter: "@terrencebosco"
-  rss: true
+  rss: false
 #  reddit: yourname
   linkedin: /in/terrence-bosco/
 #  xing: yourname
