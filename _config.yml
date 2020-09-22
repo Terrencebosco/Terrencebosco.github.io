@@ -14,7 +14,7 @@ author: Some Person
 navbar-links:
   About Me: "aboutme"
   Resources:
-    - Kaggle: "Kaggle.com"
+    - Kaggle: "www.Kaggle.com"
   Author's home: "https://www.linkedin.com/in/terrence-bosco/"
 
 # --- Logo --- #
