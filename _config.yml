@@ -4,17 +4,17 @@
 title: Bosco Blog
 
 # Short description of your site
-description: A virtual proof that I'm awesome
+description: Personal projects and blogs
 
 # Your name to show in the footer
-author: Some Person
+author: Terrence Bosco
 
 # --- List of links in the navigation bar --- #
 
 navbar-links:
   About Me: "aboutme"
-  Resources:
-    - Kaggle: "www.Kaggle.com"
+  # Resources:
+    # -
   Author's home: "https://www.linkedin.com/in/terrence-bosco/"
 
 # --- Logo --- #
